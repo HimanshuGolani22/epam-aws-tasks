@@ -19,10 +19,11 @@ exports.handler = async (event) => {
 
     }
     return {
-        statusCode: 400, headers: { "Content-Type": "application/json" },
+        statusCode: 400, headers: { 
+            "Content-Type": "application/json" 
+        },
         body: JSON.stringify({
             statusCode: 400,
-
         }),
     };
 };
