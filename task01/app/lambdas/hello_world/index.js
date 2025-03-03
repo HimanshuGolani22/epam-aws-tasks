@@ -1,12 +1,11 @@
-exports.handler = async (event) => {
+// exports.handler = async (event) => {
 
-    const response = {
-        statusCode: 200,
-        message: JSON.stringify({ statusCode: 200, message: "Hello from Lambda" }),
-    };
+//     const response = {
+//         body: JSON.stringify('Hello from Lambda!'),
+//     };
 
-    return response;
-};
+//     return response;
+// };
 // exports.handler = async (event) => {
 //     const path = event.rawPath || event.path || "/";
 //     const method = event.requestContext?.http?.method || event.httpMethod || "UNKNOWN";
