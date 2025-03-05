@@ -1,5 +1,5 @@
 {
-  "DemoLambda-role": {
+  "cmtr-b693ed72-hello_world-zj83-role": {
     "predefined_policies": [],
     "principal_service": "lambda",
     "custom_policies": [
