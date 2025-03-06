@@ -23,17 +23,9 @@
       "Version": "2012-10-17"
     },
     "resource_type": "iam_policy",
-    "tags": {}
-  },
-  "MyApiGateway": {
-    "resource_type": "api_gateway",
-    "deploy_stage": "dev",
-    "dependencies": [],
-    "resources": {
-      "/hello": {
-        "enable_cors": true
-      }
-    },
-    "tags": {}
+    "tags": {},
+    "url_config": {
+      "auth_type": "NONE"
+    }
   }
 }
