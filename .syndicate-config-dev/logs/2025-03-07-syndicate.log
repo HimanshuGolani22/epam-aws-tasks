@@ -1,0 +1,48 @@
+2025-03-07 23:38:00,607 [INFO] USER:himanshu_golani generate.py:72:project LOG: Project name: task06
+2025-03-07 23:38:00,608 [INFO] USER:himanshu_golani generate.py:79:project LOG: Project path: C:\Users\himanshu_golani\Desktop\Aws\epam-aws-tasks
+2025-03-07 23:38:00,633 [INFO] USER:himanshu_golani project.py:77:generate_project_structure LOG: Project task06 folder has been successfully created.
+2025-03-07 23:38:00,633 [INFO] USER:himanshu_golani helper.py:330:timed LOG: Stage project, elapsed time: 0:00:00.026630
+2025-03-07 23:38:22,040 [INFO] USER:himanshu_golani s3_resource.py:40:validate_bucket_name LOG: Starting validating bucket name 'syndicate-education-platform-custom-sandbox-artifacts-sbox01'
+2025-03-07 23:38:22,057 [INFO] USER:himanshu_golani s3_resource.py:73:validate_bucket_name LOG: Finished validating bucket name 'syndicate-education-platform-custom-sandbox-artifacts-sbox01'
+2025-03-07 23:38:22,057 [INFO] USER:himanshu_golani helper.py:525:convert LOG: Stripping run_id:JAP-08,run_type:stm,type:user,user_id:b693ed72 from "," a bit..
+2025-03-07 23:38:22,057 [INFO] USER:himanshu_golani helper.py:529:convert LOG: Converting: run_id:JAP-08,run_type:stm,type:user,user_id:b693ed72 to dict..
+2025-03-07 23:38:22,057 [INFO] USER:himanshu_golani helper.py:541:convert LOG: Converted to such a dict: {'run_id': 'JAP-08', 'run_type': 'stm', 'type': 'user', 'user_id': 'b693ed72'}
+2025-03-07 23:38:24,075 [WARNING] USER:himanshu_golani generator.py:76:generate_configuration_files LOG: The config_path property is not specified. The working directory is used
+2025-03-07 23:38:24,076 [WARNING] USER:himanshu_golani generator.py:93:generate_configuration_files LOG: The "project_path" property is not specified. The working directory will be used as a project path. To change the path, edit the syndicate.yml by path C:\Users\himanshu_golani\Desktop\Aws\epam-aws-tasks\task06\.syndicate-config-dev
+2025-03-07 23:38:24,084 [INFO] USER:himanshu_golani generator.py:155:generate_configuration_files LOG: Syndicate initialization has been completed. 
+Set SDCT_CONF:
+Unix: export SDCT_CONF="C:\Users\himanshu_golani\Desktop\Aws\epam-aws-tasks\task06\.syndicate-config-dev"
+Windows: setx SDCT_CONF C:\Users\himanshu_golani\Desktop\Aws\epam-aws-tasks\task06\.syndicate-config-dev
+2025-03-07 23:38:24,088 [INFO] USER:himanshu_golani helper.py:330:timed LOG: Stage config, elapsed time: 0:00:02.030074
+2025-03-07 23:39:06,080 [INFO] USER:himanshu_golani handlers.py:106:syndicate LOG: Configuration used: C:\Users\himanshu_golani\Desktop\Aws\epam-aws-tasks\.syndicate-config-dev
+2025-03-07 23:39:06,081 [ERROR] USER:himanshu_golani decorators.py:136:wrapper LOG: sdct.conf does not exist inside C:\Users\himanshu_golani\Desktop\Aws\epam-aws-tasks\.syndicate-config-dev folder
+2025-03-07 23:39:06,084 [ERROR] USER:himanshu_golani decorators.py:137:wrapper LOG: Traceback (most recent call last):
+  File "C:\Users\himanshu_golani\AppData\Local\Programs\Python\Python313\Lib\site-packages\syndicate\core\decorators.py", line 134, in wrapper
+    return_code = func(*args, **kwargs)
+  File "C:\Users\himanshu_golani\AppData\Local\Programs\Python\Python313\Lib\site-packages\syndicate\core\handlers.py", line 107, in syndicate
+    initialize_connection()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\himanshu_golani\AppData\Local\Programs\Python\Python313\Lib\site-packages\syndicate\core\__init__.py", line 106, in initialize_connection
+    CONFIG = ConfigHolder(CONF_PATH)
+  File "C:\Users\himanshu_golani\AppData\Local\Programs\Python\Python313\Lib\site-packages\syndicate\core\conf\processor.py", line 63, in __init__
+    self._init_conf_config(dir_path=dir_path)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\himanshu_golani\AppData\Local\Programs\Python\Python313\Lib\site-packages\syndicate\core\conf\processor.py", line 92, in _init_conf_config
+    raise AssertionError(
+        'sdct.conf does not exist inside %s folder' % dir_path)
+AssertionError: sdct.conf does not exist inside C:\Users\himanshu_golani\Desktop\Aws\epam-aws-tasks\.syndicate-config-dev folder
+Traceback (most recent call last):
+  File "C:\Users\himanshu_golani\AppData\Local\Programs\Python\Python313\Lib\site-packages\syndicate\core\decorators.py", line 134, in wrapper
+    return_code = func(*args, **kwargs)
+  File "C:\Users\himanshu_golani\AppData\Local\Programs\Python\Python313\Lib\site-packages\syndicate\core\handlers.py", line 107, in syndicate
+    initialize_connection()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\himanshu_golani\AppData\Local\Programs\Python\Python313\Lib\site-packages\syndicate\core\__init__.py", line 106, in initialize_connection
+    CONFIG = ConfigHolder(CONF_PATH)
+  File "C:\Users\himanshu_golani\AppData\Local\Programs\Python\Python313\Lib\site-packages\syndicate\core\conf\processor.py", line 63, in __init__
+    self._init_conf_config(dir_path=dir_path)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\himanshu_golani\AppData\Local\Programs\Python\Python313\Lib\site-packages\syndicate\core\conf\processor.py", line 92, in _init_conf_config
+    raise AssertionError(
+        'sdct.conf does not exist inside %s folder' % dir_path)
+AssertionError: sdct.conf does not exist inside C:\Users\himanshu_golani\Desktop\Aws\epam-aws-tasks\.syndicate-config-dev folder
