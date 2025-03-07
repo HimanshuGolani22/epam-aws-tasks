@@ -3,25 +3,32 @@
     "policy_content": {
       "Statement": [
         {
+          "Effect": "Allow",
           "Action": [
             "logs:CreateLogGroup",
             "logs:CreateLogStream",
-            "logs:PutLogEvents",
+            "logs:PutLogEvents"
+          ],
+          "Resource": "*"
+        },
+        {
+          "Effect": "Allow",
+          "Action": [
             "dynamodb:GetItem",
             "dynamodb:Query",
             "dynamodb:PutItem",
-            "dynamodb:Batch*",
-            "dynamodb:DeleteItem",
-            "ssm:PutParameter",
-            "ssm:GetParameter",
-            "kms:Decrypt",
-            "dynamodb:GetItem",
-            "dynamodb:Query",
-            "dynamodb:PutItem",
-            "dynamodb:Batch*",
+            "dynamodb:BatchWriteItem",
             "dynamodb:DeleteItem"
           ],
+          "Resource": "arn:aws:dynamodb:eu-central-1:196241772369:table/Events"
+        },
+        {
           "Effect": "Allow",
+          "Action": [
+            "ssm:PutParameter",
+            "ssm:GetParameter",
+            "kms:Decrypt"
+          ],
           "Resource": "*"
         }
       ],
@@ -66,6 +73,26 @@
         }
       }
     },
+    "tags": {}
+  },
+  "Configuration": {
+    "resource_type": "dynamodb_table",
+    "hash_key_name": "key",
+    "hash_key_type": "S",
+    "read_capacity": 1,
+    "write_capacity": 1,
+    "global_indexes": [],
+    "autoscaling": [],
+    "tags": {}
+  },
+  "Audit": {
+    "resource_type": "dynamodb_table",
+    "hash_key_name": "id",
+    "hash_key_type": "S",
+    "read_capacity": 1,
+    "write_capacity": 1,
+    "global_indexes": [],
+    "autoscaling": [],
     "tags": {}
   }
 }
