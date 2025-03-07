@@ -49,14 +49,7 @@ export const handler = async (event) => {
 
         console.log("DynamoDB Response:", response);
 
-        const responseObject = {
-            statusCode: 201,
-            body: JSON.stringify({
-                statusCode: 201,
-                event: eventItem
-            })
-        };
-
+        const responseObject = { statusCode: 201, body: JSON.stringify({ statusCode: 201, event: eventItem }) };
 
         return responseObject;
 
@@ -67,4 +60,4 @@ export const handler = async (event) => {
             body: JSON.stringify({ message: "Internal server error", error: error.message })
         };
     }
-}; 
+};
