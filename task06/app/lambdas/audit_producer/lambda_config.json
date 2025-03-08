@@ -17,7 +17,7 @@
   "event_sources": [
     {
       "resource_type": "dynamodb_trigger",
-      "target_table": "${target_table}",
+      "target_table": "Configuration",  
       "batch_size": 1
     }
   ],
@@ -30,3 +30,4 @@
   "ephemeral_storage": 512,
   "tags": {}
 }
+

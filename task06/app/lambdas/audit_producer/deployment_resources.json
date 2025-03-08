@@ -3,7 +3,11 @@
     "predefined_policies": [],
     "principal_service": "lambda",
     "custom_policies": [
-      "lambda-basic-execution"
+      "lambda-basic-execution",
+      "dynamodb:DescribeStream",
+      "dynamodb:ListStreams",
+      "dynamodb:GetRecords",
+      "dynamodb:GetShardIterator"
     ],
     "resource_type": "iam_role",
     "allowed_accounts": [
